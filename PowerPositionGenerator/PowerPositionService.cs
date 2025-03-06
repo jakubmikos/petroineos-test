@@ -40,7 +40,7 @@ public class PowerPositionService : IPowerPositionService
             }
             catch (PowerServiceException pse)
             {
-                // as not processing the trades for the day is not acceptable, we retry as long as we can (until the aggregation interval runs out)
+                // as skipping the processing of the trades for the day is not acceptable, we retry as long as we can (until the aggregation interval runs out)
                 this._logger.LogWarning(pse, "Fetching trades failed. Retrying in 1 second");
                 await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
             }

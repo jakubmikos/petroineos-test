@@ -27,7 +27,7 @@ public class PowerPositionBackgroundService : BackgroundService
 
     public override Task StartAsync(CancellationToken cancellationToken)
     {
-        this._timer = new PeriodicTimer(this._aggregatorConfig.AggregationInterval);
+        this._timer = new PeriodicTimer(TimeSpan.FromMinutes(this._aggregatorConfig.AggregationIntervalMinutes));
         this._cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
         
         return base.StartAsync(cancellationToken);
@@ -50,7 +50,7 @@ public class PowerPositionBackgroundService : BackgroundService
             {
                 using var taskCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
 
-                taskCts.CancelAfter(this._aggregatorConfig.AggregationInterval);
+                taskCts.CancelAfter(TimeSpan.FromMinutes(this._aggregatorConfig.AggregationIntervalMinutes));
 
                 try
                 {
@@ -65,7 +65,7 @@ public class PowerPositionBackgroundService : BackgroundService
         }
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
         {
-            // Service is stopping, this is expected
+            // Service is stopping
         }
         catch (Exception ex)
         {

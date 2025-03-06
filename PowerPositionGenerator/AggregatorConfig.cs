@@ -2,6 +2,6 @@
 
 public class AggregatorConfig
 {
-    public TimeSpan AggregationInterval { get; set; } = TimeSpan.FromSeconds(15);
+    public int AggregationIntervalMinutes { get; set; } = 30;
     public string FileFolder { get; set; } = "";
 }
