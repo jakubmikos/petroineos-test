@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPositionGenerator", "PowerPositionGenerator\PowerPositionGenerator.csproj", "{66296A4E-0391-468C-82A7-81CC8C972239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPositionGeneratorTests", "PowerPositionGeneratorTests\PowerPositionGeneratorTests.csproj", "{49600415-7245-4109-AEF3-0E592F27D936}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66296A4E-0391-468C-82A7-81CC8C972239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66296A4E-0391-468C-82A7-81CC8C972239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66296A4E-0391-468C-82A7-81CC8C972239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66296A4E-0391-468C-82A7-81CC8C972239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49600415-7245-4109-AEF3-0E592F27D936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49600415-7245-4109-AEF3-0E592F27D936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49600415-7245-4109-AEF3-0E592F27D936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49600415-7245-4109-AEF3-0E592F27D936}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
